@@ -12,15 +12,14 @@
     <artifactId>prj1-mod-a</artifactId>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.solr/solr-core -->
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-core</artifactId>
-            <version>4.10.3</version>
+            <!-- In addition to the excludes defined in parent pom dependencyManagement section, exclude these : -->
             <exclusions>
                 <exclusion>
                     <groupId>org.eclipse.jetty</groupId>
-                    <artifactId>jetty-jaas</artifactId>
+                    <artifactId>jetty-continuation</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>

@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.koant.maven.demo</groupId>
-            <artifactId>prj4-mod-a</artifactId>
+            <artifactId>prj3-mod-b</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

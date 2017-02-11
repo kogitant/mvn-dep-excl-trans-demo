@@ -11,6 +11,25 @@
 
     <artifactId>prj2-mod-e</artifactId>
 
+
+    <!-- Due to this rule, no jetty dependencies appear in the dependency tree of this module, ever -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-core</artifactId>
+                <version>4.10.3</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
     <dependencies>
         <dependency>
             <groupId>com.koant.maven.demo</groupId>
